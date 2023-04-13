@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- My files links -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <title>Encriptador de mensajes</title>
+</head>
+
+<body>
+    <div id="main-container">
+        <header id="header">
+            <div id="logo">
+                <img src="./images/Logo.svg" alt="logo-image">
+            </div>
+        </header>
+        <div id="left-div">
+            <textarea name="" id="inputTextarea" cols="20" rows="10">Ingrese el texto aquí</textarea>
+            <div id="container-below">
+                <div id="caution-message-container">
+                    <img src="./images/bi_exclamation-circle-fill.svg" alt="exclamation-cicle">
+                    <p id="caution-message" class="advice-text">Solo letras minúsculas y sin acentos</p>
+                </div>
+                <div id="buttons-container">
+                    <button id="encrypt-btn">Encriptar</button>
+                    <button id="decrypt-btn">Desencriptar</button>
+                </div>
+            </div>
+        </div>
+        <div id="right-div">
+            <div id="no-messages-found-container" class="">
+                <img id="guy-img" src="./images/Muñeco.svg" alt="a guy with a magnifying glass looking for something">
+                <div id="no-messages-main-text">Ningún mensaje fue encontrado</div>
+                <div class="advice-text">Ingresa el texto que desees encriptar o desencriptar</div>
+            </div>
+            <div id="encrypted-message-container" class="hide">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptate eveniet vero expedita
+                    fugiat magni tenetur neque voluptatem ullam, cum modi, esse molestias quod dolores praesentium
+                    eaque! Porro, dignissimos odio.
+                </p>
+                <button id="copy-btn">Copiar</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #content {
+        display: flex;
+
+        justify-content: space-around;
+        flex-flow: row wrap;
+        align-items: stretch;
+    }
+
+    .small {
+        flex-grow: 1;
+        flex-basis: 100px;
+        border: 3px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .double {
+        flex-grow: 2;
+        flex-basis: 200px;
+        border: 3px solid rgba(0, 0, 0, 0.2);
+    }
+</style>
+
+<body>
+    <h4>This is a Flex-Grow</h4>
+    <h5>A,B,C and F are flex-grow:1 . D and E are flex-grow:2 .</h5>
+    <div id="content">
+        <div class="small" style="background-color:red;">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias molestiae, incidunt sit ad odio fuga deserunt, modi deleniti debitis maxime voluptatem beatae expedita est assumenda blanditiis aut. Culpa, vitae accusamus.</p>
+        </div>
+        <div class="small" style="background-color:lightblue;">B</div>
+        <div class="small" style="background-color:yellow;">C</div>
+        <div class="double" style="background-color:brown;">D</div>
+        <div class="double" style="background-color:lightgreen;">E</div>
+        <div class="small" style="background-color:brown;">F</div>
+    </div>
+</body>
+
+</html>
