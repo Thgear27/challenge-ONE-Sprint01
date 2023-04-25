@@ -36,28 +36,27 @@ function main() {
     let inputText = document.getElementById("inputTextarea");
     let outputText = document.getElementById("encrypted-message");
     let cautionMessageContainer = document.getElementById("caution-message-container");
-    let encryptationAllowed = false;
+    let encryptionAllowed = false;
 
     console.log(outputText);
 
     inputText.addEventListener('keyup', () => {
-        let regex = /^[a-z\s]+$/;
+        let regex = /^[a-zñ,.\s]+$/;
         if (regex.test(inputText.value) || inputText.value === "") {
             document.getElementById("icon-color").style.fill = "#000";
             document.getElementById("warning").style.color = "#000";
             cautionMessageContainer.style.bottom = "0px";
-            encryptationAllowed = true;
+            encryptionAllowed = true;
         } else {
             document.getElementById("icon-color").style.fill = "#f00";
             document.getElementById("warning").style.color = "#f00";
             cautionMessageContainer.style.bottom = "10px";
-            encryptationAllowed = false;
+            encryptionAllowed = false;
         }
     });
 
-
     encryptBtn.addEventListener('click', () => {
-        if (!encryptationAllowed) {
+        if (!encryptionAllowed) {
             cautionMessageContainer.classList.add("shake-animate");
             setTimeout(() => {
                 cautionMessageContainer.classList.remove("shake-animate");
@@ -76,14 +75,14 @@ function main() {
     });
 
     decryptBtn.addEventListener('click', () => {
-        if (!encryptationAllowed) {
+        if (!encryptionAllowed) {
             cautionMessageContainer.classList.add("shake-animate");
             setTimeout(() => {
                 cautionMessageContainer.classList.remove("shake-animate");
             }, 300)
             return;
         }
-        if (inputText.value !== "" && encryptationAllowed) {
+        if (inputText.value !== "" && encryptionAllowed) {
             document.getElementById("no-messages-found-container").classList.add("hide")
             document.getElementById("encrypted-message-container").classList.remove("hide");
 
