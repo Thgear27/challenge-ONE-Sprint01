@@ -1,7 +1,7 @@
 :root {
     --background-color-1: #0A3871;
     --background-color-2: #F3F5FC;
-    --background-color-3 :#D8DFE8;
+    --background-color-3: #D8DFE8;
     --soft-message: #495057;
     --hard-message: #343A40;
 }
@@ -10,6 +10,7 @@
     margin: 0;
     padding: 0;
     border: none;
+    box-sizing: border-box;
 }
 
 html,
@@ -113,7 +114,7 @@ footer {
 }
 
 #guy-img {
-    width: fit-content;
+    max-width: 100%;
 }
 
 #header {
@@ -170,6 +171,39 @@ footer {
     gap: 8px;
     font-size: 12px;
     align-items: center;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.shake-animate {
+    animation-name: shake;
+    animation-duration: 0.3s;
+}
+
+@keyframes shake {
+    0% {
+        left: 10px
+    }
+
+    20% {
+        left: -10px;
+    }
+
+    40% {
+        left: 10px
+    }
+
+    60% {
+        left: -10px;
+    }
+
+    80% {
+        left: 10px
+    }
+
+    100% {
+        left: -10px;
+    }
 }
 
 #caution-message-container img {
@@ -216,17 +250,18 @@ p::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    width: 100%;
 }
 
 #encrypted-message-container {
     /* border: 2px solid green; */
-
     padding: 32px;
     display: flex;
     flex-direction: column;
     gap: 16px;
 
     height: 100%;
+    width: 100%;
 
     justify-content: space-between;
 
