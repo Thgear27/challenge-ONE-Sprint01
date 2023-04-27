@@ -227,6 +227,8 @@ footer {
     margin-left: 80px;
     margin-right: 40px;
 
+    max-width: 500px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -235,9 +237,9 @@ footer {
 }
 
 /* Am not sure if using this is a good idea */
-p::-webkit-scrollbar {
+/* p::-webkit-scrollbar {
     display: none;
-}
+} */
 
 #right-div p {
     max-height: 600px;
@@ -251,6 +253,10 @@ p::-webkit-scrollbar {
     flex-direction: column;
     gap: 16px;
     width: 100%;
+}
+
+#encrypted-message {
+    overflow-wrap: break-word;
 }
 
 #encrypted-message-container {
