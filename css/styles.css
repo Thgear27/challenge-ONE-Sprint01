@@ -237,9 +237,9 @@ footer {
 }
 
 /* Am not sure if using this is a good idea */
-/* p::-webkit-scrollbar {
+p::-webkit-scrollbar {
     display: none;
-} */
+}
 
 #right-div p {
     max-height: 600px;
